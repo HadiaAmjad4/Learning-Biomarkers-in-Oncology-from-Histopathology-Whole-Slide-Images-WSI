@@ -1,0 +1,13 @@
+method,val_auc,test_auc
+Attention MIL (Ensemble),0.6666666666666667,0.65
+Mean Pooling + LogReg (C=0.001),0.4,0.45
+Normalized + SVM,0.16666666666666669,0.45
+Attention MIL (Single),0.5333333333333334,0.45
+Mean Pooling + Random Forest,0.23333333333333336,0.42500000000000004
+SMOTE + LogReg,0.13333333333333336,0.4
+Mean Pooling + LogReg (C=0.01),0.2666666666666667,0.4
+Max Pooling + LogReg,0.4,0.4
+Multi-feature + LogReg,0.4,0.35000000000000003
+Mean Pooling + LogReg (C=0.1),0.13333333333333336,0.35
+Mean Pooling + LogReg (C=1.0),0.06666666666666668,0.25
+Gradient Boosting,0.13333333333333336,0.2
