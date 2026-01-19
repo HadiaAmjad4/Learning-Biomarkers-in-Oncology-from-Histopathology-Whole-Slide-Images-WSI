@@ -14,6 +14,105 @@ This project compares two state-of-the-art foundation models for computational p
 
 ---
 
+## Dataset
+
+### CAMELYON16 Preprocessed Dataset
+
+This project uses a preprocessed version of the CAMELYON16 dataset, created and maintained by [Wassim Chikhi](https://www.kaggle.com/wassmed).
+
+**Dataset Link**: [CAMELYON Preprocessed v4 Patches](https://www.kaggle.com/datasets/wassmed/camelyon-prepro-v4-patches/data)
+
+### Dataset Structure
+```
+camelyon-prepro-v4-patches/
+├── patches/                         # All extracted tissue patches (256×256)
+├── patches_metadata.csv             # Patch-level metadata (no split)
+└── patches_metadata_with_split.csv  # Patch-level metadata with WSI-level split
+```
+
+### Dataset Specifications
+
+- **Source**: CAMELYON16 Whole Slide Images (WSI)
+- **Patch Size**: 256 × 256 pixels
+- **Max Patches per WSI**: 300 (balanced representation)
+- **Total WSIs**: 54 (39 train, 8 validation, 9 test)
+
+### Quality Filtering Pipeline
+
+All patches underwent strict quality control:
+- Background/white region removal
+- Low-saturation filtering
+- Low-variance (uniform) patch removal
+- Blur detection (Laplacian variance threshold)
+
+### Train/Validation/Test Split
+
+⚠️ **CRITICAL**: The split is performed at **WSI-level**, not patch-level.
+
+| Split | WSIs | Normal | Tumor |
+|-------|------|--------|-------|
+| Train | 39   | 17     | 22 |
+| Val   | 8    | 3      | 5  |
+| Test  | 9    | 4      | 5  |
+
+**Split Strategy**:
+- All patches from the same WSI belong to the same split
+- Stratified by WSI label (normal/tumor)
+- Prevents data leakage and ensures fair evaluation
+- Column: `split ∈ {train, val, test}` in `patches_metadata_with_split.csv`
+
+### Class Distribution
+
+- **Tumor**: ~57%
+- **Normal**: ~43%
+
+This imbalance reflects the original CAMELYON16 distribution and is intentional. Class balancing (if needed) should be handled during training (e.g., loss weighting).
+
+### Loading the Dataset
+```python
+import pandas as pd
+
+# Load metadata with split information
+DATA_ROOT = "/path/to/camelyon-prepro-v4-patches"
+df = pd.read_csv(f"{DATA_ROOT}/patches_metadata_with_split.csv")
+PATCH_DIR = f"{DATA_ROOT}/patches"
+
+# Select training patches
+train_df = df[df["split"] == "train"]
+
+# Select validation patches
+val_df = df[df["split"] == "val"]
+
+# Select test patches
+test_df = df[df["split"] == "test"]
+```
+
+### Reproducibility Guidelines
+
+ **DO**:
+- Use `patches_metadata_with_split.csv` exclusively
+- Respect the pre-defined WSI-level split
+- Report results at WSI-level
+- Evaluate strictly on validation/test splits
+
+ **DON'T**:
+- Create a new split
+- Mix patches from different splits
+- Force 50/50 class balance at WSI-level
+- Use patches from test set during training/validation
+
+### Project Context
+
+This dataset serves as a common experimental ground for two complementary methods:
+
+- **Method 1** (Wassim Chikhi): STR-based Random Walk with spatio-temporal representation
+- **Method 2** (Hadia AMJAD): UNI vs H-OPTIMUS foundation model benchmark
+
+Both methods use identical data, splits, and evaluation protocols to ensure scientifically valid comparisons.
+
+###Dataset can be found at
+[CAMELYON Preprocessed v4 Patches](https://www.kaggle.com/datasets/wassmed/camelyon-prepro-v4-patches/data)
+
 ## Methodology
 
 ### Foundation Models
