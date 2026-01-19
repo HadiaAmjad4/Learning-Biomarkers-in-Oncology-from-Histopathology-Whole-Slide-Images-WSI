@@ -110,8 +110,7 @@ This dataset serves as a common experimental ground for two complementary method
 
 Both methods use identical data, splits, and evaluation protocols to ensure scientifically valid comparisons.
 
-###Dataset can be found at
-[CAMELYON Preprocessed v4 Patches](https://www.kaggle.com/datasets/wassmed/camelyon-prepro-v4-patches/data)
+
 
 ## Methodology
 
