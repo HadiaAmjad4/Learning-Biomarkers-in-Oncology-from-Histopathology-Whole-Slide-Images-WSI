@@ -70,19 +70,14 @@ This project compares two state-of-the-art foundation models for computational p
 ## Visualizations
 
 ### UNI Results
-![UNI Complete Comparison](Learning_Biomarkers_Notebooks/UNI2-h/uni_complete_comparison.png)
-*Complete comparison of all 9 methods with UNI embeddings*
+[![UNI Complete Comparison](UNI2-h/uni_complete_comparison.png)](UNI2-h/uni_complete_comparison.png)
+*Complete comparison of all 9 methods using UNI embeddings*
 
-![UNI ROC Curves](results/uni/figures/uni_best_method_roc_curves.png)
-*ROC curves for best UNI method*
+[![UNI ROC Curves](UNI2-h/best_method_roc_curves.png)](UNI2-h/best_method_roc_curves.png)
+*ROC curves for the best-performing UNI method*
 
-### H-OPTIMUS Results
-![H-OPTIMUS Complete Comparison](results/hoptimus/figures/hoptimus_complete_comparison.png)
-*Complete comparison of all 9 methods with H-OPTIMUS embeddings*
-
-### Direct Comparison
-![UNI vs H-OPTIMUS](results/comparison/uni_vs_hoptimus_comparison.png)
-*Head-to-head comparison of best methods*
+[![UNI Confusion Matrix](UNI2-h/best_method_confusion_matrices.png)](UNI2-h/best_method_confusion_matrices.png)
+*Confusion matrix for the best UNI method*
 
 ---
 
