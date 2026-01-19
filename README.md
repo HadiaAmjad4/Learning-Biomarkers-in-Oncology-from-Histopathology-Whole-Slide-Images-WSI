@@ -112,8 +112,8 @@ seaborn
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/wsi-biomarker-learning.git
-cd wsi-biomarker-learning
+git clone [https://github.com/yourusername/wsi-biomarker-learning.git](https://github.com/HadiaAmjad4/Learning-Biomarkers-in-Oncology-from-Histopathology-Whole-Slide-Images-WSI)
+
 
 # Install dependencies
 pip install -r requirements.txt
