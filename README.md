@@ -305,4 +305,4 @@ January 2026
 
 ## Contact
 
-For questions or collaborations, please open an issue or contact [hadiaamjad4812@example.com]
+For questions or collaborations, please open an issue or contact [hadiaamjad4812@gmail.com]
