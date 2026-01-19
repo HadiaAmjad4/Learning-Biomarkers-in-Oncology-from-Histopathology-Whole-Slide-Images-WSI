@@ -79,6 +79,22 @@ This project compares two state-of-the-art foundation models for computational p
 [![UNI Confusion Matrix](UNI2-h/best_method_confusion_matrices.png)](UNI2-h/best_method_confusion_matrices.png)
 *Confusion matrix for the best UNI method*
 
+### H-OPTIMUS Results
+
+[![H-OPTIMUS Complete Comparison](H_Optimus/hoptimus_complete_comparison.png)](H_Optimus/hoptimus_complete_comparison.png)
+*Complete comparison of all 9 methods using H-OPTIMUS embeddings*
+
+[![H-OPTIMUS ROC Curves](H_Optimus/best_method_roc_curves_hoptimus.png)](H_Optimus/best_method_roc_curves_hoptimus.png)
+*ROC curves for the best-performing H-OPTIMUS method*
+
+[![H-OPTIMUS Confusion Matrix](H_Optimus/best_method_confusion_matrices_hoptimus.png)](H_Optimus/best_method_confusion_matrices_hoptimus.png)
+*Confusion matrix for the best H-OPTIMUS method*
+
+### Direct UNI vs H-OPTIMUS Comparison
+
+[![UNI vs H-OPTIMUS](Comparison/uni_vs_hoptimus_comparison.png)](Comparison/uni_vs_hoptimus_comparison.png)
+*Head-to-head comparison of the best UNI and H-OPTIMUS methods*
+
 ---
 
 ## Getting Started
