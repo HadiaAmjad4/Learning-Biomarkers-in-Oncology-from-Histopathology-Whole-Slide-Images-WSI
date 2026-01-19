@@ -112,7 +112,7 @@ seaborn
 ### Installation
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/wsi-biomarker-learning.git](https://github.com/HadiaAmjad4/Learning-Biomarkers-in-Oncology-from-Histopathology-Whole-Slide-Images-WSI)
+git clone https://github.com/HadiaAmjad4/Learning-Biomarkers-in-Oncology-from-Histopathology-Whole-Slide-Images-WSI
 
 
 # Install dependencies
