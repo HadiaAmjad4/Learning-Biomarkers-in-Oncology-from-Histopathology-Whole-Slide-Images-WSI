@@ -70,7 +70,7 @@ This project compares two state-of-the-art foundation models for computational p
 ## Visualizations
 
 ### UNI Results
-![UNI Complete Comparison](results/uni/figures/uni_complete_comparison.png)
+![UNI Complete Comparison](Learning_Biomarkers_Notebooks/UNI2-h/uni_complete_comparison.png)
 *Complete comparison of all 9 methods with UNI embeddings*
 
 ![UNI ROC Curves](results/uni/figures/uni_best_method_roc_curves.png)
