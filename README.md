@@ -106,13 +106,13 @@ test_df = df[df["split"] == "test"]
 This dataset serves as a common experimental ground for two complementary methods:
 
 - **Method 1** (Wassim Chikhi): STR-based Random Walk with spatio-temporal representation
-- **Method 2** (Hadia AMJAD): UNI vs H-OPTIMUS foundation model benchmark
+- **Method 2** (Hadia AMJAD): UNI vs H-OPTIMUS foundation models benchmark
 
 Both methods use identical data, splits, and evaluation protocols to ensure scientifically valid comparisons.
 
 
 
-## Methodology
+## Methodology: Method 2
 
 ### Foundation Models
 1. **UNI** - Mahmood Lab's Universal Pathology Foundation Model
