@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This project compares two state-of-the-art foundation models for computational pathology in oncology: **UNI** (Universal Pathology) and **H-OPTIMUS** (Bioptimus). We evaluate their performance on Whole Slide Image (WSI) classification using 9 different aggregation methods.
+This project compares two state-of-the-art foundation models for computational pathology in oncology: **UNI** (Universal Pathology) and **H-OPTIMUS** (Bioptimus).Evaluated their performance on Whole Slide Image (WSI) classification using 9 different aggregation methods.
 
 ### Key Objectives
 - Extract patch-level embeddings from histological WSIs
